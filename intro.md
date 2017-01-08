@@ -72,6 +72,15 @@ I must warn you....
 
 ---
 
+## Requirements
+
+- The more you attend class, the more you'll get out of this course
+- Please be respectful of your classmates
+  - disrespect or bullying will not be tolerated
+- Please do feel free to ask questions and raise your hand if your confused
+
+---
+
 > How do you get to Carnegie Hall?
 Practice, practice, practice.
 
