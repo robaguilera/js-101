@@ -12,6 +12,17 @@
 
 ---
 
+## How to Read These Notes 
+
+- I am using a program called *Deckset* that allows me to use the `markdown` language to create powerpoint slides
+- Hence the notes you have are the notes powering this slide you're reading 
+  - Hashtags denote headings
+  - Hyphens are bullet points 
+  - Backticks ("\`\`") hold code 
+  - 3 hyphens create a new page 
+
+---
+
 ## Basics of programming
 
 - We will be covering in this section a very high level overview of what programming is
