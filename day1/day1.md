@@ -7,7 +7,8 @@
 - Grasp the basic concepts of what programming is
 - Understand what Javascript is used for
 - Grasp and practice the basics of Javascript syntax
-- Complete an assessment and extra credit assignment
+  - variables, comments, assignments, operators, control statements
+- Complete a variety of assessments and exercises 
 
 ---
 
