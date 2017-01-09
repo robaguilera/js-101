@@ -25,11 +25,19 @@
 
 ---
 
-## However...
+## Let's Break Some Ice
 
-I must warn you....
+---
 
-![](image/cat.gif)
+- Pick a person you don't know at your table
+- Ask them these 3 easy questions and jot their answers down (you'll introduce this person to the class)
+  - What would be your perfection vacation?
+  - Would you prefer to visit Earth in 2100 or travel back to 1900?  Why?
+  - True love or 1 billion dollars?  Why?
+
+---
+
+![](image/js.gif)
 
 ---
 
@@ -39,15 +47,14 @@ I must warn you....
   - can be too abstract to grasp easily
 
 ---
+![left](https://www.youtube.com/watch?v=CqkHigmtEEY#t=2m50s)
 
 - you can't be afraid to fail
 - to get back up
 - and to try again
 
 > understanding development comes from failure
-- Milton Glaser
-
-![left](https://www.youtube.com/watch?v=CqkHigmtEEY#t=2m50s)
+-- Milton Glaser
 
 ---
 
