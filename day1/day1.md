@@ -846,40 +846,9 @@ if (bank_balance < 10) {
 
 ---
 
-- We can also attach an `else` or `else if` statement to catch other logic possibilities
 - Why we do this is...
 
 ![](../image/crossroad.jpg)
-
----
-
-```
-if (bank_balance == 1) {
-  console.log('No can do chief!');
-} else if (bank_balance == 0) {
-  console.log('Can I interest you in loan?');
-} else {
-  console.log('Not sure what you got going on there buddy.');
-}
-```
-
----
-
-- We can also use what's called a switch statement
-
-```
-switch (bank_balance) {
-  case 1:
-    console.log('No can do chief!');
-    break;
-  case 0:
-    console.log('Can I interest you in loan?');
-    break;
-  default:
-    console.log('Not sure what you got going on there buddy.');
-    break;
-}
-```
 
 ---
 
@@ -949,7 +918,238 @@ if (bal == 12) {
 ```
 
 ---
+## Syntax
+### Comparison Operators
 
-## Homework
+- The greater than operator (>) compares the values of two numbers. If the number to the left is greater than the number to the right, it returns true. Otherwise, it returns false.
 
-- Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.
+- Like the equality operator, greater than operator will convert data types of values while comparing.
+
+---
+
+*Instructions*
+
+```
+var bal = 100;
+
+if (val) {  // val is greater than bal
+  console.log("Over 100");
+}
+
+```
+
+---
+
+## Syntax
+### Comparison Operators
+
+- The greater than or equal to operator (>=) compares the values of two numbers. If the number to the left is greater than or equal to the number to the right, it returns true. Otherwise, it returns false.
+
+- Like the equality operator, greater than or equal to operator will convert data types while comparing.
+
+
+---
+
+*Instructions*
+
+```
+var bal = 100;
+if (val) {  // val is greater than or equal to bal
+  console.log("Over 100");
+}
+
+```
+
+---
+
+## Syntax
+### Comparison Operators
+
+- The less than operator (<) compares the values of two numbers. If the number to the left is less than the number to the right, it returns true. Otherwise, it returns false. Like the equality operator, less than operator converts data types while comparing.
+
+---
+## Syntax
+### Comparison Operators
+
+- The less than or equal to operator (<=) compares the values of two numbers. If the number to the left is less than or equal the number to the right, it returns true. If the number on the left is greater than the number on the right, it returns false. Like the equality operator, less than or equal to converts data types.
+
+---
+
+## Syntax
+### Comparison Operators
+
+- Sometimes you will need to test more than one thing at a time. The logical and operator (&&) returns true if and only if the operands to the left and right of it are true.
+
+- The same effect could be achieved by nesting an if statement inside another if
+
+---
+
+```
+if (num > 5) {
+  if (num < 10) {
+    return "Yes";
+  }
+}
+return "No";
+
+if (num > 5 && num < 10) {
+  return "Yes";
+}
+return "No";
+```
+
+---
+
+*Instructions*
+
+- combine the two if statements into one statement
+  - val must be less than or equal to 15
+  - val must be greater than 10
+
+```
+var val = 11;
+
+if (val) {
+  if (val) {
+    console.log('yes');
+  }
+}
+console.log('no');
+
+```
+
+---
+
+## Syntax
+### Comparison Operators
+
+- The logical or operator (||) returns true if either of the operands is true. Otherwise, it returns false.
+
+---
+- combine the two if statements into one statement
+  - val must be less than 10 or greater than or equal to 20
+
+```
+if (val) {
+  console.log('yes');
+}
+
+if (val) {
+  console.log('yes');
+}
+
+```
+
+---
+
+## Syntax
+### Else statements
+
+- When a condition for an if statement is true, the block of code following it is executed. What about when that condition is false? With an else statement, an alternate block of code can be executed.
+
+---
+
+```
+if (num > 10) {
+  console.log("si");
+} else {
+  console.log("no");
+}
+```
+
+---
+
+*Instructions*
+- Combine the second `if` statement into an `else` statement.
+
+```
+var result = "";
+
+if (val > 5) {
+  result = "Bigger than 5";
+}
+
+if (val <= 5) {
+  result = "5 or Smaller";
+}
+```
+
+---
+
+## Syntax
+### Else If
+
+- If you have multiple conditions that need to be addressed, you can chain if statements together with else if statements
+
+```
+if (num > 15) {
+  return "Bigger than 15";
+} else if (num < 5) {
+  return "Smaller than 5";
+} else {
+  return "Between 5 and 15";
+}
+```
+
+---
+
+*Instructions*
+
+- Convert the logic into if/else statements
+
+```
+if (val > 10) {
+  console.log("Greater than 10");
+}
+
+if (val < 5) {
+  console.log("Smaller than 5");
+}
+
+console.log("Between 5 and 10");
+```
+
+---
+
+## Syntax
+### Else Statements
+
+- Order is important in if, else if statements.
+
+- The loop is executed from top to bottom so you will want to be careful of what statement comes first.
+
+---
+
+## Syntax
+### Else Statements
+
+- if/else statements can be chained together for complex logic.
+- Here is **pseudocode** (code we write as a blueprint of what we want to do) of multiple chained if / else if statements:
+
+---
+
+```
+if (condition1) {
+  statement1
+} else if (condition2) {
+  statement2
+} else if (condition3) {
+  statement3
+} else {
+  statement
+}
+```
+
+---
+
+*Instructions*
+
+- Write a chained if/else statement that satisfies the following conditions
+
+```
+num < 5 - log "Tiny"
+num < 10 - log "Small"
+num < 15 - log "Medium"
+num < 20 - log "Large"
+num >= 20 - log "Huge"
+```
