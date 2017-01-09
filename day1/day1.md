@@ -1165,3 +1165,10 @@ num < 15 - log "Medium"
 num < 20 - log "Large"
 num >= 20 - log "Huge"
 ```
+
+---
+
+## Reading Assignment
+
+- [var, let, or const?](https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75#.vjqxrywkg)
+- [How it feels to learn Javascript](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.gpsbcf4da)
