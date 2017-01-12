@@ -8,18 +8,7 @@
 - Understand what Javascript is used for
 - Grasp and practice the basics of Javascript syntax
   - variables, comments, assignments, operators, control statements
-- Complete a variety of assessments and exercises 
-
----
-
-## How to Read These Notes 
-
-- I am using a program called *Deckset* that allows me to use the `markdown` language to create powerpoint slides
-- Hence the notes you have are the notes powering this slide you're reading 
-  - Hashtags denote headings
-  - Hyphens are bullet points 
-  - Backticks ("\`\`") hold code 
-  - 3 hyphens create a new page 
+- Complete a variety of assessments and exercises
 
 ---
 
@@ -1076,13 +1065,14 @@ if (num > 10) {
 
 ```
 var result = "";
+var val;
 
 if (val > 5) {
-  result = "Bigger than 5";
+  console.log("Bigger than 5");
 }
 
 if (val <= 5) {
-  result = "5 or Smaller";
+  console.log("5 or Smaller");
 }
 ```
 
@@ -1141,9 +1131,9 @@ console.log("Between 5 and 10");
 ---
 
 ```
-if (condition1) {
+if (the user has not entered a bal (undefined)) {
   statement1
-} else if (condition2) {
+} else if (the users bal is less than 3) {
   statement2
 } else if (condition3) {
   statement3
@@ -1160,15 +1150,7 @@ if (condition1) {
 
 ```
 num < 5 - log "Tiny"
-num < 10 - log "Small"
-num < 15 - log "Medium"
-num < 20 - log "Large"
-num >= 20 - log "Huge"
+num > 5 but less than 10 - log "Small"
+num > 10 < 20 - log "Medium"
+num >= 20 - log "Large"
 ```
-
----
-
-## Reading Assignment
-
-- [var, let, or const?](https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75#.vjqxrywkg)
-- [How it feels to learn Javascript](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.gpsbcf4da)

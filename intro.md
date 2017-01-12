@@ -5,6 +5,9 @@
 # Robert Aguilera
 ## robertaguilerajr@gmail.com
 
+- twitter: @Robb_Aguilera
+- github.com/robaguilera/js-101
+
 ---
 
 ## Our Goals for the class
