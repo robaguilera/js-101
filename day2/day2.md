@@ -37,6 +37,7 @@ function functionName() {
 
 - Functions wouldn't be too useful if we couldn't send them data
 - *Parameters* are variables that act as placeholders for the values that are passed to the function when called
+
 ```
 function ourFunctionWithArgs(a, b) {
   console.log(a - b);
@@ -348,6 +349,133 @@ case 4:
 
 ---
 
+# Switch Statements
+
+- If you have many options to choose from, a switch statement can be easier to write than many chained `if/else` statements  
+
+---
+
+*Instructions*
+
+- Convert the following into a switch statement
+
+```
+if (val === "bob") {
+  answer = "Marley";
+} else if (val === "jimi") {
+  answer = "Hendrix";
+} else if (val === "jim") {
+  answer = "Morrison";
+} else if (val === "janis") {
+  answer = "Joplin";
+} else if (val === 7) {
+  answer = "Huh?";
+}
+```
+
+---
+
+## Return Statements
+
+- Sometimes a function return information to the code that called them
+- For example, when you need to perform a calculation
+
+```
+function calcArea(width, height) {
+  var area = width * height;
+  return area;
+}
+
+wallOne = calcArea(4, 9);
+console.log(wallOne);
+
+```
+
+---
+
+## Return Statements
+
+- You can also return multiple values with an array
+
+```
+function getSize(width, height, depth) {
+  var area = width * height;
+  var volume = width * height * depth;
+  var sizes = [area, volume];
+  return sizes;
+}
+```
+
+---
+
+## Return Statements
+
+- When the JS engine encounters a `return` statement, it will return that value and stop running that function
+
+```
+function stopEarly() {
+  console.log('Hello ');
+  return;
+  console.log('Did I run?');
+}
+stopEarly();
+```
+
+---
+
+*Instructions*
+
+- Modify the function `abTest` so that if `a` or `b` are less than `0` the function will terminate with a value of `undefined`
+
+```
+function abTest(a, b) {
+  // Only change code below this line
+
+  // Only change code above this line
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+// Change values below to test your code
+abTest(2,2);
+```
+
+---
+## Return Statements with Booleans
+
+- What does a **strict comparison** return?
+
+```
+if (a === b) {
+  // code
+}
+```
+
+---
+
+## Return Statements with Booleans
+
+- A common **anti-pattern** (a commonly occurring solution to a problem that is a bad practice), is to use an `if/else` statement to do a comparison and then return `true/false`
+
+```
+function isEqual(a,b) {
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
+}
+```
+- How can we shorten this?
+
+---
+
+*Instructions*
+
+- Shorten that if/else statement (hint: you should only have one line of code in that function)
+
+---
+
+
 ## For Loops
 
 - You can run the same code multiple times by using a loop
@@ -392,3 +520,19 @@ for (var i = 0; i < 5; i++) {
 - (This is actually an interview question that has been claimed to weed out a significant percentage of programmer candidates. So if you solved it, you’re now allowed to feel good about yourself.)
 
 ---
+
+## Extra Credit
+
+- Write a loop that makes seven calls to console.log to output the following triangle:
+
+```
+#
+##
+###
+####
+#####
+######
+#######
+```
+
+- It may be useful to know that you can find the length of a string by writing .length after it.
