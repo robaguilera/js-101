@@ -415,3 +415,164 @@ var myPlants = [
 
 var secondTree =  // Change this line
 ```
+
+---
+
+## For Loops 
+
+- Let's Review For Loops 
+
+```
+var ourArray = [];
+
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+```
+
+---
+
+*Instructions*
+
+- Use a for loop to work to push the values 1 through 5 onto myArray
+
+```
+var myArray = [];
+```
+
+---
+
+- A common task in Javascript is to iterate through the contents of an array 
+
+```
+var arr = [10,9,8,7,6];
+for (var i=0; i < arr.length; i++) {
+   console.log(arr[i]);
+}
+```
+- Remember that Arrays have zero-based numbering, which means the last index of the array is length - 1
+
+---
+
+*Instructions*
+
+- Declare and initialize a variable total to 0
+- Use a for loop to add the value of each element of the myArr array to total
+
+```
+var myArr = [ 2, 3, 4, 5, 6];
+
+```
+
+---
+
+## Nested Loops
+
+- If you have a multi-dimensional array, you can use the same logic as the prior waypoint to loop through both the array and any sub-arrays. Here is an example:
+
+```
+var arr = [
+  [1,2], [3,4], [5,6]
+];
+for (var i=0; i < arr.length; i++) {
+  for (var j=0; j < arr[i].length; j++) {
+    console.log(arr[i][j]);
+  }
+}
+```
+
+- This outputs each sub-element in arr one at a time. Note that for the inner loop, we are checking the .length of arr[i], since arr[i] is itself an array
+
+---
+
+*Instructions*
+
+- Modify function multiplyAll so that it multiplies the product variable by each number in the sub-arrays of arr
+
+```
+function multiplyAll(arr) {
+  var product = 1;
+  // Only change code below this line
+  // Only change code above this line
+  return product;
+}
+
+// should equal 5040
+multiplyAll([[1,2],[3,4],[5,6,7]]);
+```
+
+---
+
+## While Loops 
+
+- Another type of JavaScript loop is called a "while loop", because it runs "while" a specified condition is true and stops once that condition is no longer true
+
+```
+var ourArray = [];
+var i = 0;
+while(i < 5) {
+  ourArray.push(i);
+  i++;
+}
+```
+
+--- 
+
+*Instructions*
+
+- Push the numbers 0 through 4 to an array using a while loop
+
+---
+
+## Exercise time
+
+- You are going to write some code that loops through an array object and checks to see if a profile name and properties exists 
+- You have a function that is going to take in `name` and a property `prop` as arguments
+- This function should check to see if `name` exists in the array object
+- It should also check to see if the `prop` is a property of that person 
+- If both are true, then you should return the "value" of that property  
+- If `name` is not valid, then you should return an error message
+- If `prop` does not correspond to any properties on that individual then you should return an error message 
+
+---
+
+```
+var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "Violin"]
+    },
+    {
+        "firstName": "Kristian",
+        "lastName": "Vos",
+        "number": "unknown",
+        "likes": ["Javascript", "Gaming", "Foxes"]
+    }
+];
+
+function lookUpProfile(name, prop){
+// Only change code below this line
+
+// Only change code above this line
+}
+
+// Change these values to test your function
+lookUpProfile("Akira", "likes");
+
+```
+
+---
