@@ -366,6 +366,8 @@ var trunkContents = ""; // Change this line
 
 - As we have seen in earlier examples, objects can contain both nested objects and nested arrays. Similar to accessing nested objects, Array bracket notation can be chained to access nested arrays
 
+---
+
 ```
 var ourPets = [
   {
@@ -418,9 +420,9 @@ var secondTree =  // Change this line
 
 ---
 
-## For Loops 
+## For Loops
 
-- Let's Review For Loops 
+- Let's Review For Loops
 
 ```
 var ourArray = [];
@@ -442,7 +444,7 @@ var myArray = [];
 
 ---
 
-- A common task in Javascript is to iterate through the contents of an array 
+- A common task in Javascript is to iterate through the contents of an array
 
 ```
 var arr = [10,9,8,7,6];
@@ -481,6 +483,8 @@ for (var i=0; i < arr.length; i++) {
 }
 ```
 
+---
+
 - This outputs each sub-element in arr one at a time. Note that for the inner loop, we are checking the .length of arr[i], since arr[i] is itself an array
 
 ---
@@ -503,7 +507,7 @@ multiplyAll([[1,2],[3,4],[5,6,7]]);
 
 ---
 
-## While Loops 
+## While Loops
 
 - Another type of JavaScript loop is called a "while loop", because it runs "while" a specified condition is true and stops once that condition is no longer true
 
@@ -516,7 +520,7 @@ while(i < 5) {
 }
 ```
 
---- 
+---
 
 *Instructions*
 
@@ -526,13 +530,13 @@ while(i < 5) {
 
 ## Exercise time
 
-- You are going to write some code that loops through an array object and checks to see if a profile name and properties exists 
+- You are going to write some code that loops through an array object and checks to see if a profile name and properties exists
 - You have a function that is going to take in `name` and a property `prop` as arguments
 - This function should check to see if `name` exists in the array object
-- It should also check to see if the `prop` is a property of that person 
+- It should also check to see if the `prop` is a property of that person
 - If both are true, then you should return the "value" of that property  
 - If `name` is not valid, then you should return an error message
-- If `prop` does not correspond to any properties on that individual then you should return an error message 
+- If `prop` does not correspond to any properties on that individual then you should return an error message
 
 ---
 
