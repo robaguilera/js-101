@@ -27,7 +27,7 @@ this.wheels = 4;
 
 - To use a constructor function we call it with the `new` keyword in front of it
 
-`var myCar - new Car():`
+`var myCar = new Car():`
 
 - myCar is now an **instance** of the Car constructor and it looks like the object it described
 - Note that it is important to use the new keyword when calling a constructor. This is how Javascript knows to create a new object and that all the references to this inside the constructor should be referring to this new object.
@@ -173,8 +173,7 @@ var newArray = oldArray;
 var array = [1, 12, 21, 2];
 array.sort(function(a, b) {
   return a - b;
-
-    });
+});
 ```
 
 - sort can be passed a compare function as a callback. The compare function should return a negative number if a should be before b, a positive number if a should be after b, or 0 if they are equal.
@@ -193,7 +192,7 @@ array.sort();
 
 ---
 
-## Reverse Method
+## Reduce Method
 
 - The array method `reduce` is used to iterate through an array and condense it into one value.
 - To use reduce you pass in a callback whose arguments are an accumulator and the current value.
@@ -204,8 +203,8 @@ array.sort();
 ---
 
 ```
-var singleVal = array.reduce(function(previousVal, currentVal) {
-  return previousVal - currentVal;
+var singleVal = array.reduce(function(accumulator, currentVal) {
+  return accumulator - currentVal;
 }, 0);
 ```
 
@@ -225,7 +224,7 @@ singleVal = array
 ```
 ---
 
-![left](../img/supers.gif)
+![left](../image/supers.gif)
 
 - Headover to functionalProgramming.js and try your hand at the exercises there
 
@@ -355,4 +354,3 @@ function largestOfFour(arr) {
 
 largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
 ```
-
