@@ -1,68 +1,22 @@
-## Day 2
-### Let's Get Funky
-
-![](../image/funky.gif)
+# Day 3
 
 ---
 
-## Functions
+## Objects
 
-- In Javascript we can divide our code into reusable parts called **functions**
+- Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.
 
-```
-function functionName() {
-  console.log('hello mundo');
-}
-```
+- Objects are useful for storing data in a structured way, and can represent real world objects, like a person
 
-- You can **invoke** or **call** (means use) this function by using it's name followed by parentheses
-`functionName();`
 
 ---
 
-## Functions
-
-- Each time a function is called, that's how many times it will run it's code
-- It will not run unless you invoke it
-  - Well that's not exactly true, you can make it invoke itself, but more on that later
-
-*Instructions*
-
-- Create a function that prints "Hello World" to the console
-- Make sure you call it
-
----
-
-## Functions
-
-- Functions wouldn't be too useful if we couldn't send them data
-- *Parameters* are variables that act as placeholders for the values that are passed to the function when called
-
 ```
-function ourFunctionWithArgs(a, b) {
-  console.log(a - b);
-}
-```
-- *Arguments* are values that are *passed* into the function when it's called
-
-`ourFunctionWithArgs(10,5);`
-
----
-
-*Instructions*
-
-- Create a function that takes two arguments, multiplies them, and logs the result out to the console
-
----
-
-## Functions
-
-- In JavaScript, *Scope* refers to the visibility of variables. Variables which are defined outside of a function block have *Global* scope. This means, they can be seen everywhere in your JavaScript code.
-
-```
-var foo = 'foo';
-function sayFoo() {
-  console.log(foo);
+var person = {
+  "name" : "John Doe",
+  "age" : 22,
+  "nationality" : "American",
+  "newUser" : true
 }
 ```
 
@@ -70,436 +24,409 @@ function sayFoo() {
 
 *Instructions*
 
-- Create a variable called `bar` outside of a function
-- Log that variable to the console inside a function called `sayBar`
+ - Create an object called `myPet`
+  - Give the follow properties
+    - "name", "type", "age"
+  - And set each property to it's appropriate value
 
 ---
 
-## Functions
+## Accessing Object Properties
 
-- Try this in your editor
+- There are two ways to access the properties of an object: the dot operator "." and bracket notation "[]", similar to an array
+- The dot operator is what you use when you know the name of the property you're trying to access ahead of time
+
+---
 
 ```
-function sayBar() {
-  var bar = 'bar';
-  console.log(bar);
+var myObj = {
+  prop1: "val1",
+  prop2: "val2"
+};
+var prop1val = myObj.prop1; // val1
+var prop2val = myObj.prop2; // val2
+```
+
+---
+
+*Instructions*
+
+- Access the appropriate properties for the object `testObj` using the dot operator
+
+```
+var testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+var hatValue = testObj;
+var shirtValue = testObj;
+
+```
+
+---
+
+## Accessing Object Properties
+
+- The second way to access the properties of an object is bracket notation '[]'
+- If the property of the object you are trying to access has a space in it, you will need to use bracket notation
+
+```
+var myObj = {
+  "first name" : "John",
+  "last name" : "Doe"
 }
-console.log(bar);
+var firstName = myObj["first name"]; // John
 ```
 
 ---
 
-- It is possible to have both local and global variables with the same name
-- When you do this, the local variable takes precedence over the global variable
-
----
-
-## Declaring Functions
-
-- There are several ways to declare functions
-- This is a **function declaration**
+*Instructions*
 
 ```
-function declaration() {// code //}
-```
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
 
-- This creates a function that you have to call later by name
-- There's also a tricky thing called **hoisting** that we'll get into later
+// Only change code below this line
 
----
-
-## Declaring Functions
-
-- If you put a function where an interpreter would expect to see an expression, you've created a **function expression**
-
-```
-var area = function() {// code //}
-```
-
-- This is what's called an **anonymous expression** because the function has no name
-- Issue can be that it can be hard to debug
-
-```
-var area = function area() {// code //}
+var entreeValue;
+var drinkValue;
 ```
 
 ---
-## Functions
 
-- You can also declare functions inside each other
+## Accessing Object Properties
+
+- Another use of bracket notation on objects is to use a variable to access a property. This can be very useful for iterating through lists of the object properties or for doing the lookup.
 
 ```
-function foo() {
-  var foo = 'foo';
-  function sayFoo() {
-    console.log(foo);
+var myDog = "Hunter";
+var dogs = {
+  Fido: "Mutt",
+  Hunter: "Doberman",
+  Snoopie: "Beagle"
+}
+var breed = dogs[myDog];
+console.log(breed);// "Doberman"
+```
+
+---
+
+*Instructions*
+
+- Use the playerNumber variable to lookup player 16 in testObj using bracket notation.
+
+```
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+var playerNumber;      
+var player = testObj;   
+```
+
+---
+
+## Updating Object Properties
+
+- After you've created a JavaScript object, you can update its properties at any time just like you would update any other variable
+- You can use either dot or bracket notation to update.
+
+```
+var ourDog = {
+  "name": "Glen",
+  "legs": 4,
+  "tails": 1,
+};
+ourDog.name = "Rick";
+
+```
+
+---
+
+*Instructions*
+
+- Change out every property of the `ourDog` object into one of your choosing
+
+```
+var ourDog = {
+  "name": "Fido",
+  "type" : "Poodle",
+  "color" : "Brown"
+};
+```
+
+---
+
+## Adding properties
+
+- You can add new properties to existing JavaScript objects the same way you would modify them
+
+```
+ourDog.age = 14;
+ourDog["alive"] = true;
+```
+
+---
+
+## Delete properties
+
+```
+delete ourDog.age;
+```
+
+
+---
+
+*Instructions*
+
+- Add an age property
+- Add a height property
+- Delete the nationality property
+
+```
+var person = {
+  "name" : "Jimmy Choo",
+  "nationality" : "Russian"
+}
+```
+
+---
+
+- Now is about time we take a look at some Javascript documentation
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+---
+
+## Checking for properties
+
+- Sometimes it is useful to check if the property of a given object exists or not
+- We can use the `.hasOwnProperty(propname)` method of objects to determine if that object has the given property name.
+- hasOwnProperty() returns true or false if the property is found or not.
+
+---
+
+```
+var myObj = {
+  top: "hat",
+  bottom: "pants"
+};
+myObj.hasOwnProperty("top");    // true
+myObj.hasOwnProperty("middle"); // false
+```
+
+---
+
+*Instructions*
+
+- Copy the function and modify it so that it tests if "myObj" has the property "car".  If not return "Not Found"
+
+```
+var myObj = {
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleigh"
+};
+
+function checkObj(checkProp) {
+  // code here
+}
+
+// Test your code by modifying these values
+checkObj("gift");
+```
+
+---
+
+## Complex Objects
+
+- Sometimes you may want to store data in a flexible Data Structure. A JavaScript object is one way to handle flexible data. They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects.
+
+---
+
+```
+var ourMusic = [
+  {
+    "artist": "Daft Punk",
+    "title": "Homework",
+    "release_year": 1997,
+    "formats": [
+      "CD",
+      "Cassette",
+      "LP" ],
+    "gold": true
   }
-  sayFoo();
-}
-foo();
+];
 ```
 
 ---
 
-## Lexical Scope
+## Complex Objects
 
-- *Lexical Scope* is the scope of the variable based on it's location within the source code
+- This is an array which contains one object inside. The object has various pieces of metadata about an album. It also has a nested "formats" array. If you want to add more album records, you can do this by adding records to the top level array.
+
+- Objects hold data in a property, which has a key-value format. In the example above, "artist": "Daft Punk" is a property that has a key of "artist" and a value of "Daft Punk".
+
+---
 
 ```
-var foo = 'foo';
-function levelOne() {
-  var bar = 'bar';
-  function levelTwo() {
-    var fooBar = 'fooBar';
+{
+  "artist": "Daft Punk",
+  "title": "Homework",
+  "release_year": 1997,
+  "formats": [
+    "CD",
+    "Cassette",
+    "LP"
+  ],
+  "gold": true
+}
+```
+- https://www.instagram.com/nfl/media/
+
+---
+
+
+
+---
+
+*Instructions*
+
+- Add a new album to the myMusic array. Add artist and title strings, release_year number, and a formats array of strings (commas are needed except for the last property)
+
+```
+var myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CS",
+      "8T",
+      "LP" ],
+    "gold": true
   }
-}
+  // Add record here
+];
 ```
 
 ---
 
-*Instructions*
+## Complex Objects
 
-Fix the broken function on the next page so that each log statement works
-
----
+- The sub-properties of objects can be accessed by chaining together the dot or bracket notation
 
 ```
-function fooNess() {
-  var bar = "bar";
-  console.log(foo);
-  function theBar() {
-    var fooBar = "foobar";
-    console.log(bar);
+var ourStorage = {
+  "desk": {
+    "drawer": "stapler"
+  },
+  "cabinet": {
+    "top drawer": {
+      "folder1": "a file",
+      "folder2": "secrets"
+    },
+    "bottom drawer": "soda"
   }
-}
-function fooBarNess() {
-  var foo = "foo";
-  console.log(fooBar);
-}
-```
-
----
-
-## Returning a Value
-
-- We can pass values into a function with arguments
-- You can use a **return** statement to send a value back out of a function
-
-```
-function plusThree(num) {
-  return num + 3;
-}
-var answer = plusThree(5); // 8
-
+};
+ourStorage.cabinet["top drawer"].folder2;  // "secrets"
+ourStorage.desk.drawer; // "stapler"
 ```
 
 ---
 
 *Instructions*
 
-- Create a function called `area`
-- This function needs to take the width and height of an element and find the area
-  - "width x height"
-- Return the value
-
----
-
-## Assignments and Returned Values
-
-- We can also take the return value of a function and store it to a variable
 
 ```
-function timesMe(num1, num2) {
-  return num1 * num2;
-}
-var product = timesMe(5, 7);
-```
-
----
-
-*Instructions*
-
-- Call the processArg with an argument of 7 and assign it to the variable `processed`
-
-```
-var processed = 0;
-
-function processArg(num) {
-  return (num + 3) / 5;
-}
-```
-
----
-
-![left](../image/arrayquiz.gif)
-
-- In Computer Science a queue is an abstract Data Structure where items are kept in order
-- In the function on the next page, create a function that:
-  - takes and an array and a number
-  - it adds the number to the array
-  - removes the first number
-  - returns the result
-
----
-
-// add function below here
-
-// Test Setup
-var testArr = [1,2,3,4,5];
-var testNum = 6;
-
----
-
-## Switch Statements
-
-- If you have many options to choose from, use a switch statement. A switch statement tests a value and can have many case statements which defines various possible values. Statements are executed from the first matched case value until a break is encountered
-
----
-
-- Here is a pseudocode example:
-
-```
-switch (num) {
-  case value1:
-    statement1;
-    break;
-  case value2:
-    statement2;
-    break;
-...
-  case valueN:
-    statementN;
-    break;
-}
-```
-
----
-
-## Switch Statements
-
-- Case values are tested with strict equality (===). The break tells JavaScript to stop executing statements. If the break is omitted, the next statement will be executed
-
----
-
-*Instructions*
-- Write a switch statement which tests val and sets answer for the following conditions:
-1 - "alpha"
-2 - "beta"
-3 - "gamma"
-4 - "delta"
-
-```
-function caseInSwitch(val) {
-  var answer = "";
-  return answer;  
-}
-caseInSwitch(1);
-```
-
----
-
-## Default statements
-
-- You can set a `default` statement that will catch any value that may not meet the logic specified
-
----
-
-```
-switch (num) {
-  case value1:
-    statement1;
-    break;
-  default:
-    defaultStatement;
-}
-```
-
----
-
-*Instructions*
-- Write a switch statement to set answer for the following conditions:
-"a" - "apple"
-"b" - "bird"
-"c" - "cat"
-default - "stuff"
-
----
-
-## Switch Statements with Identical Options
-
-```
-case 1:
-case 2:
-case 3:
-  result = "1, 2, or 3";
-  break;
-case 4:
-  result = "4 alone";
-}
-```
-
----
-
-*Instructions*
-
-- Write a switch statement to set answer for the following ranges:
-1-3 - "Low"
-4-6 - "Mid"
-7-9 - "High"
-
----
-
-# Switch Statements
-
-- If you have many options to choose from, a switch statement can be easier to write than many chained `if/else` statements  
-
----
-
-*Instructions*
-
-- Convert the following into a switch statement
-
-```
-if (val === "bob") {
-  answer = "Marley";
-} else if (val === "jimi") {
-  answer = "Hendrix";
-} else if (val === "jim") {
-  answer = "Morrison";
-} else if (val === "janis") {
-  answer = "Joplin";
-} else if (val === 7) {
-  answer = "Huh?";
-}
-```
-
----
-
-## Return Statements
-
-- Sometimes a function return information to the code that called them
-- For example, when you need to perform a calculation
-
-```
-function calcArea(width, height) {
-  var area = width * height;
-  return area;
-}
-
-wallOne = calcArea(4, 9);
-console.log(wallOne);
-
-```
-
----
-
-## Return Statements
-
-- You can also return multiple values with an array
-
-```
-function getSize(width, height, depth) {
-  var area = width * height;
-  var volume = width * height * depth;
-  var sizes = [area, volume];
-  return sizes;
-}
-```
-
----
-
-## Return Statements
-
-- When the JS engine encounters a `return` statement, it will return that value and stop running that function
-
-```
-function stopEarly() {
-  console.log('Hello ');
-  return;
-  console.log('Did I run?');
-}
-stopEarly();
-```
-
----
-
-*Instructions*
-
-- Modify the function `abTest` so that if `a` or `b` are less than `0` the function will terminate with a value of `undefined`
-
-```
-function abTest(a, b) {
-  // Only change code below this line
-
-  // Only change code above this line
-  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
-}
-
-// Change values below to test your code
-abTest(2,2);
-```
-
----
-## Return Statements with Booleans
-
-- What does a **strict comparison** return?
-
-```
-if (a === b) {
-  // code
-}
-```
-
----
-
-## Return Statements with Booleans
-
-- A common **anti-pattern** (a commonly occurring solution to a problem that is a bad practice), is to use an `if/else` statement to do a comparison and then return `true/false`
-
-```
-function isEqual(a,b) {
-  if (a === b) {
-    return true;
-  } else {
-    return false;
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
   }
-}
+};
+
+var gloveBoxContents = ""; // Change this line
+var trunkContents = ""; // Change this line
 ```
-- How can we shorten this?
+
+---
+
+## Complex Objects
+
+- As we have seen in earlier examples, objects can contain both nested objects and nested arrays. Similar to accessing nested objects, Array bracket notation can be chained to access nested arrays
+
+---
+
+```
+var ourPets = [
+  {
+    animalType: "cat",
+    names: [
+      "Meowzer",
+      "Fluffy",
+      "Kit-Cat"
+    ]
+  },
+  {
+    animalType: "dog",
+    names: [
+      "Spot",
+      "Bowser",
+      "Frankie"
+    ]
+  }
+];
+ourPets[0].names[1]; // "Fluffy"
+ourPets[1].names[0]; // "Spot"
+```
 
 ---
 
 *Instructions*
 
-- Shorten that if/else statement (hint: you should only have one line of code in that function)
-
----
-
-
-## For Loops
-
-- You can run the same code multiple times by using a loop
-- The most common type of JavaScript loop is called a "for loop" because it runs "for" a specific number of times
-- For loops are declared with three optional expressions separated by semicolons:
-
 ```
-for ([initialization]; [condition]; [final-expression])
+var myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }  
+];
+
+var secondTree =  // Change this line
 ```
 
 ---
 
 ## For Loops
 
-- The initialization statement is executed one time only before the loop starts. It is typically used to define and setup your loop variable
-- The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it evaluates to true. When condition is false at the start of the iteration, the loop will stop executing
-
----
-
-- The final-expression is executed at the end of each loop iteration, prior to the next condition check and is usually used to increment or decrement your loop counter
-- In the following example we initialize with i = 0 and iterate while our condition i < 5 is true. We'll increment i by 1 in each loop iteration with i++ as our final-expression
+- Let's Review For Loops
 
 ```
 var ourArray = [];
+
 for (var i = 0; i < 5; i++) {
   ourArray.push(i);
 }
@@ -507,32 +434,149 @@ for (var i = 0; i < 5; i++) {
 
 ---
 
-![](../image/epic.gif)
+*Instructions*
 
-## FizzBuzz
+- Use a for loop to work to push the values 1 through 5 onto myArray
+
+```
+var myArray = [];
+```
 
 ---
 
-- Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
+- A common task in Javascript is to iterate through the contents of an array
 
-- When you have that working, modify your program to print "FizzBuzz", for numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz" for numbers divisible by only one of those).
-
-- (This is actually an interview question that has been claimed to weed out a significant percentage of programmer candidates. So if you solved it, you’re now allowed to feel good about yourself.)
+```
+var arr = [10,9,8,7,6];
+for (var i=0; i < arr.length; i++) {
+   console.log(arr[i]);
+}
+```
+- Remember that Arrays have zero-based numbering, which means the last index of the array is length - 1
 
 ---
 
-## Extra Credit
+*Instructions*
 
-- Write a loop that makes seven calls to console.log to output the following triangle:
+- Declare and initialize a variable total to 0
+- Use a for loop to add the value of each element of the myArr array to total
 
 ```
-#
-##
-###
-####
-#####
-######
-#######
+var myArr = [ 2, 3, 4, 5, 6];
+
 ```
 
-- It may be useful to know that you can find the length of a string by writing .length after it.
+---
+
+## Nested Loops
+
+- If you have a multi-dimensional array, you can use the same logic as the prior waypoint to loop through both the array and any sub-arrays. Here is an example:
+
+```
+var arr = [
+  [1,2], [3,4], [5,6]
+];
+for (var i=0; i < arr.length; i++) {
+  for (var j=0; j < arr[i].length; j++) {
+    console.log(arr[i][j]);
+  }
+}
+```
+
+---
+
+- This outputs each sub-element in arr one at a time. Note that for the inner loop, we are checking the .length of arr[i], since arr[i] is itself an array
+
+---
+
+*Instructions*
+
+- Modify function multiplyAll so that it multiplies the product variable by each number in the sub-arrays of arr
+
+```
+function multiplyAll(arr) {
+  var product = 1;
+  // Only change code below this line
+  // Only change code above this line
+  return product;
+}
+
+// should equal 5040
+multiplyAll([[1,2],[3,4],[5,6,7]]);
+```
+
+---
+
+## While Loops
+
+- Another type of JavaScript loop is called a "while loop", because it runs "while" a specified condition is true and stops once that condition is no longer true
+
+```
+var ourArray = [];
+var i = 0;
+while(i < 5) {
+  ourArray.push(i);
+  i++;
+}
+```
+
+---
+
+*Instructions*
+
+- Push the numbers 0 through 4 to an array using a while loop
+
+---
+
+## Exercise time
+
+- You are going to write some code that loops through an array object and checks to see if a profile name and properties exists
+- You have a function that is going to take in `name` and a property `prop` as arguments
+- This function should check to see if `name` exists in the array object
+- It should also check to see if the `prop` is a property of that person
+- If both are true, then you should return the "value" of that property  
+- If `name` is not valid, then you should return an error message
+- If `prop` does not correspond to any properties on that individual then you should return an error message
+
+---
+
+```
+var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "Violin"]
+    },
+    {
+        "firstName": "Kristian",
+        "lastName": "Vos",
+        "number": "unknown",
+        "likes": ["Javascript", "Gaming", "Foxes"]
+    }
+];
+
+function lookUpProfile(name, prop){
+// Only change code below this line
+
+// Only change code above this line
+}
+
+// Change these values to test your function
+lookUpProfile("Akira", "likes");
+
+```
+
+---
