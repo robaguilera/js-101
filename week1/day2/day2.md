@@ -464,8 +464,8 @@ return "No";
 ```
 var val = 11;
 
-if (val) {
-  if (val) {
+if (val <= 15) {
+  if (val > 10) {
     console.log('yes');
   }
 }
@@ -525,7 +525,7 @@ if (val > 5) {
   console.log("Bigger than 5");
 }
 
-if (val <= 5) {
+if (val < 5) {
   console.log("5 or Smaller");
 }
 ```
@@ -611,10 +611,75 @@ num >= 20 - log "Large"
 
 ---
 
-```## The DOM
+## For Loops
+
+- You can run the same code multiple times by using a loop
+- The most common type of JavaScript loop is called a "for loop" because it runs "for" a specific number of times
+- For loops are declared with three optional expressions separated by semicolons:
+
+```
+for ([initialization]; [condition]; [final-expression])
+```
+
+---
+
+## For Loops
+
+- The initialization statement is executed one time only before the loop starts. It is typically used to define and setup your loop variable
+- The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it evaluates to true. When condition is false at the start of the iteration, the loop will stop executing
+
+---
+
+- The final-expression is executed at the end of each loop iteration, prior to the next condition check and is usually used to increment or decrement your loop counter
+- In the following example we initialize with i = 0 and iterate while our condition i < 5 is true. We'll increment i by 1 in each loop iteration with i++ as our final-expression
+
+```
+var ourArray = [];
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+```
+
+---
+
+![](../../image/epic.gif)
+
+## FizzBuzz
+
+---
+
+- Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
+
+- When you have that working, modify your program to print "FizzBuzz", for numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz" for numbers divisible by only one of those).
+
+- (This is actually an interview question that has been claimed to weed out a significant percentage of programmer candidates. So if you solved it, you’re now allowed to feel good about yourself.)
+
+---
+
+## Extra Credit
+
+- Write a loop that makes seven calls to console.log to output the following triangle:
+
+```
+#
+##
+###
+####
+#####
+######
+#######
+```
+
+- It may be useful to know that you can find the length of a string by writing .length after it.
+
+---
+
+## The DOM
 
 - As a browser loads a web page, it creates a model of that page
 - The model is called a DOM tree, and it is stored in the browser's memory
+
+---
 
 ```
 <html>
@@ -637,7 +702,7 @@ num >= 20 - log "Large"
 
 ---
 
-![](../image/dom.jpg)
+![](../../image/dom.jpg)
 
 ---
 
@@ -699,4 +764,4 @@ num >= 20 - log "Large"
 - `previousSibling / nextSibling`
 - `firstChild / lastChild`
 
----```
+---
