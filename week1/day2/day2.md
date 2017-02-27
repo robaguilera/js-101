@@ -1,5 +1,6 @@
 # Class Goals
 
+<<<<<<< HEAD
 - [ ] Introduction to Data Structures
 - [ ] Arrays
 - [ ] More Built In Javascript Methods
@@ -25,6 +26,34 @@
 ---
 
 ## Arrays
+=======
+---
+
+- [ ] Data Structures
+- [ ] Arrays
+- [ ] Array Methods
+- [ ] Equality Operators
+- [ ] Comparison Operators
+- [ ] If/else statements
+
+---
+
+## Review
+
+- What are the 6 JavaScript values?
+
+---  
+
+## Data Structures 
+
+- Are ways to organize your various values in a way that makes sense to your program
+- One way to organize data values in JavaScript is through *arrays*
+
+---
+
+## Syntax
+### Arrays
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - With JavaScript **array** variables, we can store several pieces of data in one place.
 - You start an array declaration with an opening square bracket, end it with a closing square bracket, and put a comma between each entry, like this:
@@ -32,7 +61,12 @@
 
 ---
 
+<<<<<<< HEAD
 ## Arrays
+=======
+## Syntax
+### Arrays
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - arrays can contain any kind of value
 
@@ -41,7 +75,12 @@ Create an array and try to cram as many different types of values in it
 
 ---
 
+<<<<<<< HEAD
 ## Arrays
+=======
+## Syntax
+### Arrays
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - You can also nest arrays within other arrays, like this:
 `[["Bulls", 23], ["White Sox", 45]]`
@@ -52,7 +91,12 @@ Create a nested array
 
 ---
 
+<<<<<<< HEAD
 ## Arrays
+=======
+## Syntax
+### Arrays
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - We can access the data inside arrays using indexes
 
@@ -74,7 +118,12 @@ var data = array[1];  // equals 2
 
 ---
 
+<<<<<<< HEAD
 ## Arrays
+=======
+## Syntax
+### Arrays
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - Unlike strings, the entries of arrays are mutable and can be changed freely.
 
@@ -87,13 +136,23 @@ Modify the data stored at index 0 of ourArray to a value of 9.
 
 ---
 
+<<<<<<< HEAD
 ## Arrays
+=======
+## Syntax
+### Arrays
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - One way to think of a multi-dimensional array, is as an array of arrays. When you use brackets to access your array, the first set of brackets refers to the entries in the outer-most (the first level) array, and each additional pair of brackets refers to the next level of entries inside.
 
 ---
 
+<<<<<<< HEAD
 ## Arrays
+=======
+## Syntax
+### Arrays
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 ```
 var arr = [
@@ -136,6 +195,7 @@ var arr = [
 
 ---
 
+<<<<<<< HEAD
 ## A Quick Note on Properties
 
 - So far we've used `.length` to get the length of a string and we're about to use a few more 
@@ -172,15 +232,27 @@ What is the value of `myString[3]`
 ---
 
 ## Arrays
+=======
+## Syntax
+### Arrays
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - Now we are going to manipulate arrays
 - An easy way to append data to the end of an array is via the push() function
 - `.push()` takes one or more parameters and "pushes" them onto the end of the array
+<<<<<<< HEAD
 - Push is what we refer to as a *method*
 
 ---
 
 ## Arrays
+=======
+
+---
+
+## Syntax
+### Arrays
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 ```
 var arr = [1,2,3];
@@ -191,7 +263,12 @@ arr.push(4);
 
 ---
 
+<<<<<<< HEAD
 ## Arrays
+=======
+## Syntax
+### Arrays
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 *Instructions*
 - push `['dogs', 3]` onto the end of `myArray`;
@@ -201,7 +278,12 @@ var myArray = [["John", 23], ["cat", 2]];
 
 ---
 
+<<<<<<< HEAD
 ## Arrays
+=======
+## Syntax
+### Arrays
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - Another way to change the data in an array is with the .pop() function.
 
@@ -211,7 +293,12 @@ var myArray = [["John", 23], ["cat", 2]];
 
 ---
 
+<<<<<<< HEAD
 ## Arrays
+=======
+## Syntax
+### Arrays
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 `var oneDown = [1, 4, 6].pop();`
 
@@ -219,7 +306,12 @@ var myArray = [["John", 23], ["cat", 2]];
 
 ---
 
+<<<<<<< HEAD
 ## Arrays
+=======
+## Syntax
+### Arrays
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 *Instructions*
 
@@ -229,7 +321,12 @@ var myArray = [["John", 23], ["cat", 2]];
 
 ---
 
+<<<<<<< HEAD
 ## Arrays
+=======
+## Syntax
+### Arrays
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - pop() always removes the last element of an array. What if you want to remove the first?
 
@@ -237,7 +334,12 @@ var myArray = [["John", 23], ["cat", 2]];
 
 ---
 
+<<<<<<< HEAD
 ## Arrays
+=======
+## Syntax
+### Arrays
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 *Instructions*
 
@@ -247,7 +349,12 @@ var myArray = [["John", 23], ["cat", 2]];
 
 ---
 
+<<<<<<< HEAD
 ## Arrays
+=======
+## Syntax
+### Arrays
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - Not only can you shift elements off of the beginning of an array, you can also unshift elements to the beginning of an array i.e. add elements in front of the array.
 
@@ -255,7 +362,12 @@ var myArray = [["John", 23], ["cat", 2]];
 
 ---
 
+<<<<<<< HEAD
 ## Arrays
+=======
+## Syntax
+### Arrays
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 *Instructions*
 
@@ -266,7 +378,11 @@ var myArray = [["John", 23], ["cat", 2]];
 ---
 
 ## Time to work that array knowledge
+<<<<<<< HEAD
 ![left](../../image/arrayquiz.gif)
+=======
+![left](../image/arrayquiz.gif)
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - Create a shopping list in the variable myList
   - The list should be a multi-dimensional array containing several sub-arrays
@@ -276,7 +392,12 @@ var myArray = [["John", 23], ["cat", 2]];
 
 ---
 
+<<<<<<< HEAD
 ## Blocks
+=======
+## Syntax
+### Blocks
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - When we need to group a series of statements together we use what's called a **block**
 
@@ -290,13 +411,23 @@ var amount = 99;
 
 ---
 
+<<<<<<< HEAD
 ## Blocks
+=======
+## Syntax
+### Blocks
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - That kind of standalone block is valid, but not commonly seen in Javascript, rather, it is used with what we call **control statements** which are statements that provide some kind of logic
 
 ---
 
+<<<<<<< HEAD
 ## Conditionals
+=======
+## Syntax
+### Conditionals
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - One type of control statements are **conditionals** aka decisions
 - For example, we have the `if` block
@@ -319,11 +450,20 @@ if (bank_balance < 10) {
 
 - Why we do this is...
 
+<<<<<<< HEAD
 ![](../../image/crossroad.jpg)
 
 ---
 
 ## Equality Operators
+=======
+![](../image/crossroad.jpg)
+
+---
+
+## Syntax
+### Equality Operators
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - There are many **Comparison Operators** in JavaScript
   - Their job is to compare two values and kick back a boolean of either true or false
@@ -340,7 +480,12 @@ if (bal == 12) {
 
 ---
 
+<<<<<<< HEAD
 ## Equality Operators
+=======
+## Syntax
+### Equality Operators
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - Strict equality (===) is the counterpart to the equality operator (==)
   - Unlike the equality operator, strict equality tests both the data type and value of the compared elements.
@@ -352,7 +497,12 @@ if (bal == 12) {
 
 ---
 
+<<<<<<< HEAD
 ## Equality Operators
+=======
+## Syntax
+### Equality Operators
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - The inequality operator (!=) is the opposite of the equality operator
   - It means "Not Equal" and returns false where equality would return true and vice versa
@@ -370,7 +520,12 @@ if (bal == 12) {
 
 ---
 
+<<<<<<< HEAD
 ## Equality Operators
+=======
+## Syntax
+### Equality Operators
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - The strict inequality operator (!==) is the opposite of the strict equality operator
   - It means "Strictly Not Equal" and returns false where strict equality would return true and vice versa
@@ -385,8 +540,13 @@ if (bal == 12) {
 ```
 
 ---
+<<<<<<< HEAD
 
 ## Comparison Operators
+=======
+## Syntax
+### Comparison Operators
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - The greater than operator (>) compares the values of two numbers. If the number to the left is greater than the number to the right, it returns true. Otherwise, it returns false.
 
@@ -407,7 +567,12 @@ if (val) {  // val is greater than bal
 
 ---
 
+<<<<<<< HEAD
 ## Comparison Operators
+=======
+## Syntax
+### Comparison Operators
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - The greater than or equal to operator (>=) compares the values of two numbers. If the number to the left is greater than or equal to the number to the right, it returns true. Otherwise, it returns false.
 
@@ -428,18 +593,33 @@ if (val) {  // val is greater than or equal to bal
 
 ---
 
+<<<<<<< HEAD
 ## Comparison Operators
+=======
+## Syntax
+### Comparison Operators
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - The less than operator (<) compares the values of two numbers. If the number to the left is less than the number to the right, it returns true. Otherwise, it returns false. Like the equality operator, less than operator converts data types while comparing.
 
 ---
+<<<<<<< HEAD
 ## Comparison Operators
+=======
+## Syntax
+### Comparison Operators
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - The less than or equal to operator (<=) compares the values of two numbers. If the number to the left is less than or equal the number to the right, it returns true. If the number on the left is greater than the number on the right, it returns false. Like the equality operator, less than or equal to converts data types.
 
 ---
 
+<<<<<<< HEAD
 ## Comparison Operators
+=======
+## Syntax
+### Comparison Operators
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - Sometimes you will need to test more than one thing at a time. The logical and operator (&&) returns true if and only if the operands to the left and right of it are true.
 
@@ -472,8 +652,13 @@ return "No";
 ```
 var val = 11;
 
+<<<<<<< HEAD
 if (val) {
   if (val) {
+=======
+if (val <= 15) {
+  if (val > 10) {
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
     console.log('yes');
   }
 }
@@ -483,7 +668,12 @@ console.log('no');
 
 ---
 
+<<<<<<< HEAD
 ## Comparison Operators
+=======
+## Syntax
+### Comparison Operators
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - The logical or operator (||) returns true if either of the operands is true. Otherwise, it returns false.
 
@@ -504,7 +694,12 @@ if (val) {
 
 ---
 
+<<<<<<< HEAD
 ## Else statements
+=======
+## Syntax
+### Else statements
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - When a condition for an if statement is true, the block of code following it is executed. What about when that condition is false? With an else statement, an alternate block of code can be executed.
 
@@ -531,14 +726,23 @@ if (val > 5) {
   console.log("Bigger than 5");
 }
 
+<<<<<<< HEAD
 if (val <= 5) {
+=======
+if (val < 5) {
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
   console.log("5 or Smaller");
 }
 ```
 
 ---
 
+<<<<<<< HEAD
 ## Else If
+=======
+## Syntax
+### Else If
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - If you have multiple conditions that need to be addressed, you can chain if statements together with else if statements
 
@@ -572,7 +776,12 @@ console.log("Between 5 and 10");
 
 ---
 
+<<<<<<< HEAD
 ## Else Statements
+=======
+## Syntax
+### Else Statements
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - Order is important in if, else if statements.
 
@@ -580,7 +789,12 @@ console.log("Between 5 and 10");
 
 ---
 
+<<<<<<< HEAD
 ## Else Statements
+=======
+## Syntax
+### Else Statements
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - if/else statements can be chained together for complex logic.
 - Here is **pseudocode** (code we write as a blueprint of what we want to do) of multiple chained if / else if statements:
@@ -612,11 +826,85 @@ num > 10 < 20 - log "Medium"
 num >= 20 - log "Large"
 ```
 
+<<<<<<< HEAD
 ```## The DOM
+=======
+---
+
+## For Loops
+
+- You can run the same code multiple times by using a loop
+- The most common type of JavaScript loop is called a "for loop" because it runs "for" a specific number of times
+- For loops are declared with three optional expressions separated by semicolons:
+
+```
+for ([initialization]; [condition]; [final-expression])
+```
+
+---
+
+## For Loops
+
+- The initialization statement is executed one time only before the loop starts. It is typically used to define and setup your loop variable
+- The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it evaluates to true. When condition is false at the start of the iteration, the loop will stop executing
+
+---
+
+- The final-expression is executed at the end of each loop iteration, prior to the next condition check and is usually used to increment or decrement your loop counter
+- In the following example we initialize with i = 0 and iterate while our condition i < 5 is true. We'll increment i by 1 in each loop iteration with i++ as our final-expression
+
+```
+var ourArray = [];
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+```
+
+---
+
+![](../../image/epic.gif)
+
+## FizzBuzz
+
+---
+
+- Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
+
+- When you have that working, modify your program to print "FizzBuzz", for numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz" for numbers divisible by only one of those).
+
+- (This is actually an interview question that has been claimed to weed out a significant percentage of programmer candidates. So if you solved it, you’re now allowed to feel good about yourself.)
+
+---
+
+## Extra Credit
+
+- Write a loop that makes seven calls to console.log to output the following triangle:
+
+```
+#
+##
+###
+####
+#####
+######
+#######
+```
+
+- It may be useful to know that you can find the length of a string by writing .length after it.
+
+---
+
+## The DOM
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - As a browser loads a web page, it creates a model of that page
 - The model is called a DOM tree, and it is stored in the browser's memory
 
+<<<<<<< HEAD
+=======
+---
+
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 ```
 <html>
 <body>
@@ -638,11 +926,19 @@ num >= 20 - log "Large"
 
 ---
 
+<<<<<<< HEAD
 ![](../image/dom.jpg)
 
 ---
 
 ## The Document Node
+=======
+![](../../image/dom.jpg)
+
+---
+
+# The Document Node
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - Every element is represented as it's own node
 - At the top level is a document node, it represents the entire page
@@ -650,14 +946,22 @@ num >= 20 - log "Large"
 
 ---
 
+<<<<<<< HEAD
 ## Element Node
+=======
+# Element Node
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - These are the individual elements that make up a web page
 - You query the DOM looking for an element and once you have it, you can then access it's text or attributes
 
 ---
 
+<<<<<<< HEAD
 ## Attribute Nodes
+=======
+# Attribute Nodes
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - The opening tags of HTML elements can carry attributes (classes, ID's, form names, etc)
 - These nodes are not children of the element, but are directly part of that element
@@ -665,7 +969,11 @@ num >= 20 - log "Large"
 
 ---
 
+<<<<<<< HEAD
 ## Text Nodes
+=======
+# Text Nodes
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - Once you have accessed an element, you can then reach the text within that element
 - This is stored in a text node
@@ -675,18 +983,30 @@ num >= 20 - log "Large"
 
 ---
 
+<<<<<<< HEAD
 ## Accessing Elements
 
 ---
 
 ## Select an Individual Element Node
+=======
+# Accessing Elements
+
+---
+
+# Select an Individual Element Node
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - `getElementById()` get an element with this ID value
 - `querySelector` get an element with this class value
 
 ---
 
+<<<<<<< HEAD
 ## Multiple Elements
+=======
+# Multiple Elements
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - `getElementsByClassName()` get all elements with this class name
 - `getElementsByTagName()`  get all elements with this tag name (li, div, a)
@@ -694,10 +1014,18 @@ num >= 20 - log "Large"
 
 ---
 
+<<<<<<< HEAD
 ## Traversing Between Element Nodes
+=======
+# Traversing Between Element Nodes
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
 
 - `parentNode` selects the parent of the current element node
 - `previousSibling / nextSibling`
 - `firstChild / lastChild`
 
+<<<<<<< HEAD
 ---```
+=======
+---
+>>>>>>> 1aee1a2d67e14bcb5227e45face5e50df6d67414
