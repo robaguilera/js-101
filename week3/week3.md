@@ -1,4 +1,4 @@
-# Object Oriented & Functional Programming
+# Constructor Functions, Higher Order Functions, Abstraction and Functional Programming
 
 ---
 
@@ -99,6 +99,137 @@ var Car = function() {
   };
 };
 ```
+
+---
+
+## Higher Order Functions
+
+> Tzu-li and Tzu-ssu were boasting about the size of their latest programs. ‘Two-hundred thousand lines,’ said Tzu-li, ‘not counting comments!’ Tzu-ssu responded, ‘Pssh, mine is almost a million lines already.’ Master Yuan-Ma said, ‘My best program has five hundred lines.’ Hearing this, Tzu-li and Tzu-ssu were enlightened
+
+---
+
+- Large programs are costly
+  - complexity
+  - easy to hide bugs
+  - confusing
+
+---
+
+- Which is better?
+
+```
+var total = 0, count = 1;
+while (count <= 10) {
+  total += count;
+  count += 1;
+}
+console.log(total);
+
+// or
+
+console.log(sum(range(1,10)));
+```
+
+---
+
+## Abstracting Complexity
+
+- Although, the second example is probably larger in size (when you consider the source code), it is smaller in footprint when it comes to your application
+- You are using built-in tools, instead of rolling your own
+- Also, in terms of vocabulary (think syntactical) you are correct in using range and sum to add numbes 1-10, versus loops and counters
+
+---
+
+## Abstracting Complexity
+
+- Abstracting is expressing simpler concepts than the program as a whole
+  - You hideaway the details of what you're doing and view the problem at a higher (abstract) level
+
+---
+
+```
+Put 1 cup of dried peas per person into a container. Add water until the peas are well covered. Leave the peas in water for at least 12 hours. Take the peas out of the water and put them in a cooking pan. Add 4 cups of water per person. Cover the pan and keep the peas simmering for two hours. Take half an onion per person. Cut it into pieces with a knife. Add it to the peas. Take a stalk of celery per person. Cut it into pieces with a knife. Add it to the peas. Take a carrot per person. Cut it into pieces. With a knife! Add it to the peas. Cook for 10 more minutes.
+```
+
+---
+
+```
+Per person: 1 cup dried split peas, half a chopped onion, a stalk of celery, and a carrot.
+
+Soak peas for 12 hours. Simmer for 2 hours in 4 cups of water (per person). Chop and add vegetables. Cook for 10 more minutes.
+```
+
+---
+
+- The second recipe is easier to read and understand, but requires you to be familiar with cooking terms *soak, chop, simmer*
+- When programming, you can't rely on words begging to be used from the dictionary, so you tend to fall into the first step of programming, writing out incredibly detailed steps
+- It **must** become second nature to notice when a particular step is waiting to be abstracted away into a new word
+
+---
+
+## Abstracting in Practice
+
+```
+var array = [1,2,3];
+for (var i = 0; i < array.length; i++) {
+  console.log(array[i]);
+}
+```
+
+- How can we abstract this into a function?
+
+---
+
+- What if we want to do something else than logging the elements?
+
+```
+function forEach(items, action) {
+  for (var i = 0; i < items.length; i++) {
+    action(items[i]);
+  }
+}
+forEach(['wampa', 'x-wing', 'tie fighter'], blast);
+```
+
+---
+
+
+- We actually don't need to write `forEach` it exists for us already
+
+```
+var nums = [1,2,3,4,5];
+var sum = 0;
+nums.forEach(function(number) {
+  sum += number;
+});
+console.log(sum);
+```
+
+---
+
+## Higher-Order Functions
+
+- *Functions that operate on other functions, either by taking them as arguments or by returning them are called higher-order functions*
+- Wut?
+- Accept that functions are values
+  - They can be evaluated to return some value, not just perform actions
+- Higher-order functions allow us to abstract over *actions* as well as *values*
+
+---
+
+- You can have functions that create new functions
+
+```
+function addThis(m) {
+  return function(n) {
+    return m + n;
+  };
+}
+var addThese = addThis(10);
+console.log(addThese(20));
+```
+
+- Confusing at first, I know (look up currying)
 
 ---
 

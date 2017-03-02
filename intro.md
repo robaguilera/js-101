@@ -12,9 +12,9 @@
 
 ## Our Goals for the class
 
-- Learn Javascript
+- Learn Javascript enough to be a "beginner"
 - Not give up while learning Javascript
-- Have fun and learn some cool stuff
+- Have fun and learn to do some cool stuff
 
 ---
 
@@ -23,6 +23,8 @@
 - At the end of this course you'll have
   - a grasp of Javascript's syntax
   - how it manipulates the DOM (webpage)
+  - build a quote machine
+  - build a weather machine
   - build a TODO application
   - have enough understanding to pursue an intermediate level of knowledge
 

@@ -96,7 +96,7 @@ that is not --^
 
 ---
 
-![](../image/assembly.png)
+![](../../image/assembly.png)
 
 ---
 
@@ -174,7 +174,7 @@ Create a variable that holds your first name.
 
 ## Syntax
 ### Warning!
-![left](../image/gotcha.gif)
+![left](../../image/gotcha.gif)
 
 - You can override variables  
 - This is know as reassigning or compound assignment
@@ -320,7 +320,7 @@ console.log(y) // 2
 
 ## Quiz!
 
-![left](../image/quiz.gif)
+![left](../../image/quiz.gif)
 
 - Every so often I will present you with an exercise to test what we've learned so far
 - You will have about 5 to 20 mins depending on the difficulty of the quiz
@@ -546,7 +546,7 @@ console.log(myStr);
 ---
 
 ## Pop Quiz!
-![left](../image/doug.gif)
+![left](../../image/doug.gif)
 
 - We will now use our knowledge of strings to build a "Mad Libs" style word game.
 
