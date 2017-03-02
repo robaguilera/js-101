@@ -291,10 +291,6 @@ var ourMusic = [
 
 ---
 
-
-
----
-
 *Instructions*
 
 - Add a new album to the myMusic array. Add artist and title strings, release_year number, and a formats array of strings (commas are needed except for the last property)
@@ -503,21 +499,6 @@ function multiplyAll(arr) {
 
 // should equal 5040
 multiplyAll([[1,2],[3,4],[5,6,7]]);
-```
-
----
-
-## While Loops
-
-- Another type of JavaScript loop is called a "while loop", because it runs "while" a specified condition is true and stops once that condition is no longer true
-
-```
-var ourArray = [];
-var i = 0;
-while(i < 5) {
-  ourArray.push(i);
-  i++;
-}
 ```
 
 ---
