@@ -1,110 +1,9 @@
-# Constructor Functions, Higher Order Functions, Abstraction and Functional Programming
+#  Higher Order Functions, Abstraction and Functional Programming
 
 ---
 
-## Constructor Functions
-
-- We can create objects using what's called a **constructor** function
-- Often constructor functions are capitalized to make it clear that it is a constructor
-
+```Tzu-li and Tzu-ssu were boasting about the size of their latest programs. ‘Two-hundred thousand lines,’ said Tzu-li, ‘not counting comments!’ Tzu-ssu responded, ‘Pssh, mine is almost a million lines already.’ Master Yuan-Ma said, ‘My best program has five hundred lines.’ Hearing this, Tzu-li and Tzu-ssu were enlightened
 ```
-var Car = function() {
-  this.wheels = 4;
-  this.engines = 1;
-  this.seats = 5;
-};
-```
-
----
-
-- In a constructor the this variable refers to the new object being created by the constructor. So when we write,
-
-```
-this.wheels = 4;
-```
-
----
-
-- To use a constructor function we call it with the `new` keyword in front of it
-
-`var myCar = new Car():`
-
-- myCar is now an **instance** of the Car constructor and it looks like the object it described
-- Note that it is important to use the new keyword when calling a constructor. This is how Javascript knows to create a new object and that all the references to this inside the constructor should be referring to this new object.
-
----
-
-- Now, once the myCar instance is created it can be used like any other object and can have its properties accessed and modified the same way you would usually. For example:
-`myCar.turboType = "twin";`
-- Our myCar variable now has a property turboType with a value of "twin".
-
----
-
-*Instructions*
-
-- Create an instance of a student
-- Give this student the appropriate information to represent you
-
-```
-var Student = function () {
-  this.name = "",
-  this.age = null,
-  this.subject = ""
-}
-```
-
----
-
-- We can also add parameters to our constructor
-```
-var Car = function(wheels, seats, engines) {
-  this.wheels = wheels;
-  this.seats = seats;
-  this.engines = engines;
-};
-var myCar = new Car(6, 3, 1);
-```
-
----
-
-*Instructions*
-
-- Modify the Student constructor function to take in parameters and call those parameters with the appropriate attributes of one of your fellow classmates
-
----
-
-- Objects have their own attributes, called **properties**, and their own functions, called **methods**.
-- In the previous challenges we used the **this** keyword to reference public properties on the current object.
-- We can also create private properties and private methods which aren't accessible from outside the object
-- Useful for when we want to store information but want to control how it's used
-
----
-
-```
-var Car = function() {
-  // this is a private variable
-  var speed = 10;
-
-  // these are public methods
-  this.accelerate = function(change) {
-    speed += change;
-  };
-
-  this.decelerate = function() {
-    speed -= 5;
-  };
-
-  this.getSpeed = function() {
-    return speed;
-  };
-};
-```
-
----
-
-## Higher Order Functions
-
-> Tzu-li and Tzu-ssu were boasting about the size of their latest programs. ‘Two-hundred thousand lines,’ said Tzu-li, ‘not counting comments!’ Tzu-ssu responded, ‘Pssh, mine is almost a million lines already.’ Master Yuan-Ma said, ‘My best program has five hundred lines.’ Hearing this, Tzu-li and Tzu-ssu were enlightened
 
 ---
 
@@ -136,6 +35,9 @@ console.log(sum(range(1,10)));
 
 - Although, the second example is probably larger in size (when you consider the source code), it is smaller in footprint when it comes to your application
 - You are using built-in tools, instead of rolling your own
+
+---
+
 - Also, in terms of vocabulary (think syntactical) you are correct in using range and sum to add numbes 1-10, versus loops and counters
 
 ---
@@ -147,9 +49,20 @@ console.log(sum(range(1,10)));
 
 ---
 
-```
-Put 1 cup of dried peas per person into a container. Add water until the peas are well covered. Leave the peas in water for at least 12 hours. Take the peas out of the water and put them in a cooking pan. Add 4 cups of water per person. Cover the pan and keep the peas simmering for two hours. Take half an onion per person. Cut it into pieces with a knife. Add it to the peas. Take a stalk of celery per person. Cut it into pieces with a knife. Add it to the peas. Take a carrot per person. Cut it into pieces. With a knife! Add it to the peas. Cook for 10 more minutes.
-```
+- Put 1 cup of dried peas per person into a container.
+- Add water until the peas are well covered.
+- Leave the peas in water for at least 12 hours.
+- Take the peas out of the water and put them in a cooking pan.
+- Add 4 cups of water per person.
+- Cover the pan and keep the peas simmering for two hours.
+- Take half an onion per person. Cut it into pieces.
+
+---
+
+- Add it to the peas. Take a stalk of celery per person.
+- Cut it into pieces with a knife. Add it to the peas.
+- Take a carrot per person. Cut it into pieces. With a knife!
+- Add it to the peas. Cook for 10 more minutes.
 
 ---
 
@@ -210,7 +123,11 @@ console.log(sum);
 ## Higher-Order Functions
 
 - *Functions that operate on other functions, either by taking them as arguments or by returning them are called higher-order functions*
-- Wut?
+
+---
+
+
+- ![inline 90%](../image/wut.jpeg)
 - Accept that functions are values
   - They can be evaluated to return some value, not just perform actions
 - Higher-order functions allow us to abstract over *actions* as well as *values*
@@ -267,6 +184,9 @@ var newArray = oldArray;
 
 - The filter method is used to iterate through an array and filter out elements where a given condition is not true.
 - Filter is passed a callback function which takes the current value (we've called that val) as an argument.
+
+---
+
 - Any array element for which the callback returns true will be kept and elements that return false will be filtered out.
 
 ---
@@ -441,22 +361,16 @@ console.log(salad); // "Celery and Radish and Carrot and Potato"
 
 ---
 
-## Factorialize a number
+## Flatten an array of arrays
 
-- Return the factorial of the provided integer.
-- If the integer is represented with the letter n, a factorial is the product of all positive integers less than or equal to n.
-- Factorials are often represented with the shorthand notation n!
-- For example: 5! = 1 * 2 * 3 * 4 * 5 = 120
+- Use the `reduce` method in combination with the `concat` method to "flatten" an array of arrays into a single array
 
 ```
-function factorialize(num) {
-  return result;
-}
+var arrays = [[1, 2, 3], [4, 5], [6]];
+// your function here
 
-factorialize(5);
+// -> [1, 2, 3, 4, 5, 6];
 ```
-
----
 
 ## Find the Longest Word in a String
 
