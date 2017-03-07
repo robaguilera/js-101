@@ -197,15 +197,15 @@ Fix the broken function on the next page so that each log statement works
 ```
 function fooNess() {
   var bar = "bar";
-  console.log(foo);
+  console.log(bar);
   function theBar() {
     var fooBar = "foobar";
-    console.log(bar);
+    console.log(fooBar);
   }
 }
 function fooBarNess() {
   var foo = "foo";
-  console.log(fooBar);
+  console.log(foo);
 }
 ```
 
@@ -428,7 +428,7 @@ switch (num) {
     statement2;
     break;
     ...
-  case valueN:
+  case valueN
       statementN;
       break;
 }
@@ -443,7 +443,7 @@ switch (num) {
 ---
 
 *Instructions*
-- Write a switch statement which tests val and sets answer for the following conditions:
+- Write a switch statement which tests a value and sets an answer for the following conditions:
 1 - "alpha"
 2 - "beta"
 3 - "gamma"
@@ -451,8 +451,10 @@ switch (num) {
 
 ```
 function caseInSwitch(val) {
-  var answer = "";
-  return answer;
+  switch(val) {
+    // if value === 1 return 'alpha'
+    // if value ==== 2 return 'beta'
+  }
 }
 caseInSwitch(1);
 ```
