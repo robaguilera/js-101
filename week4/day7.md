@@ -22,7 +22,7 @@
 ---
 
 - `code-generation` - is the process of taking the AST and turning it into executable code
-- Javascript does all these steps (a lot more), however, the difference between Javascript and other compiled languages is that Javascript doesn't have the luxury of time to compile.  The code is compiled usually miliseconds before the code runs
+- Javascript does all these steps (a lot more), however, the difference between Javascript and other compiled languages is that Javascript doesn't have the luxury of time to compile.  The code is compiled usually milliseconds before the code runs
 
 ---
 
@@ -346,3 +346,70 @@ else {
 - assignments are left in their spot so be wary of that
 - function declarations are not hoisted to the top of it's enclosing scope when declared inside of blocks so be wary
 - duplicate definitions are ignored
+
+---
+
+Exercises
+
+1. Review some Array Exercises
+
+```
+// let's use reduce
+// flatten this data into one flat array (reduce, concat)
+var data = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+// flatten this complex array into one array of the cast members
+// should look like ['Christian Bale', 'Michael Caine', 'Liam Neeson'...]
+// no movie star should be repeated
+
+var input = [
+  {
+    title: "Batman Begins",
+    year: 2005,
+    cast: [
+      "Christian Bale",
+      "Michael Caine",
+      "Liam Neeson",
+      "Katie Holmes",
+      "Gary Oldman",
+      "Cillian Murphy"
+    ]
+  },
+  {
+    title: "The Dark Knight",
+    year: 2008,
+    cast: [
+      "Christian Bale",
+      "Heath Ledger",
+      "Aaron Eckhart",
+      "Michael Caine",
+      "Maggie Gyllenhal",
+      "Gary Oldman",
+      "Morgan Freeman"
+    ]
+  },
+  {
+    title: "The Dark Knight Rises",
+    year: 2012,
+    cast: [
+      "Christian Bale",
+      "Gary Oldman",
+      "Tom Hardy",
+      "Joseph Gordon-Levitt",
+      "Anne Hathaway",
+      "Marion Cotillard",
+      "Morgan Freeman",
+      "Michael Caine"
+    ]
+  }
+];
+```
+
+2. Next we are going to build a weather machine app
+    - https://www.freecodecamp.com/challenges/show-the-local-weather
+    - http://codepen.io/robaguilera/full/wgXRpO/ // as an example
+    - http://codepen.io/robaguilera/pen/PpjXLP // this you can fork
+    - You want to grab the users current location data with geolocation api
+    - Next you're going to pipe that info into the "open weather map" api
+    - From there you're going to manipulate the DOM so that it displays the users current location and weather
+    - You also want to add a button that toggles from farenheit to celsius

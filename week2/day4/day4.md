@@ -503,12 +503,6 @@ multiplyAll([[1,2],[3,4],[5,6,7]]);
 
 ---
 
-*Instructions*
-
-- Push the numbers 0 through 4 to an array using a while loop
-
----
-
 ## Exercise time
 
 - You are going to write some code that loops through an array object and checks to see if a profile name and properties exists
@@ -551,7 +545,16 @@ var contacts = [
 
 function lookUpProfile(name, prop){
 // Only change code below this line
-
+    for (var x = 0; x < contacts.length; x++){
+        if (contacts[x].firstName === firstName) {
+            if (contacts[x].hasOwnProperty(prop)) {
+                return contacts[x][prop];
+            } else {
+                return "No such property";
+            }
+        }
+    }
+return "No such contact";
 // Only change code above this line
 }
 
