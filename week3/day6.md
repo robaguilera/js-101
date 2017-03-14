@@ -1,7 +1,26 @@
-### The DOM
+# The DOM
+
+---
+
+- Class Goals
+
+- What is the DOM?
+- What elements make up the DOM?
+- What can Javascript help me do with the DOM?
+
+---
+
+# Document Object Model
+## DOM
+
+---
 
 - As a browser loads a web page, it creates a model of that page
 - The model is called a DOM tree, and it is stored in the browser's memory
+
+---
+
+- On any page, open up a browser and type in `document`
 
 ---
 
@@ -57,8 +76,15 @@
 - Once you have accessed an element, you can then reach the text within that element
 - This is stored in a text node
 - These are viewed as children of the *element node*
+
+---
+
 - If there is another child element inside the *text node* (i.e. the `<em>` tag above), it is **NOT** a child of the text node, but of the element node
 - No further branches can come off a text node
+
+---
+
+![](../image/dom.JPG)
 
 ---
 
@@ -81,8 +107,9 @@
 
 ---
 
-## Traversing Between Element Nodes
+## Traversing the DOM
 
+- Once you have an element you can move through the DOM with these five properties
 - `parentNode` selects the parent of the current element node
 - `previousSibling / nextSibling`
 - `firstChild / lastChild`
@@ -351,4 +378,73 @@ el.addEventListener('blur', function(e) {
 }, false);
 ```
 
+---
 
+## Exercises
+
+- Random Quote Machine
+http://codepen.io/robaguilera/pen/GryNRm
+- Copy that codepen
+- Build a quote machine that pulls data from the quotes on design api
+- Everytime the page loads a new quote gets loaded in along with the author name
+- You can also click the button to call in a new quote
+
+---
+
+- Language Exercise
+- Here's a real world problem
+- Below is an array of language objects
+- First organize the languages alphabetically
+- Next you're going to add all these elements into a HTML select element
+```
+<select>
+  <option value=0>Please select a language</option>
+</select>
+```
+- The end result should be that the property of the array should be the "option value" and the visible option in the select element is the value of the array.
+
+var langArray = [
+  {"lang": "Chinese"},
+  {"lang": "German"},
+  {"lang": "German (Austria)"},
+  {"lang": "Macedonian"},
+  {"lang": "Spanish (Latin America)"},
+  {"lang": "Swahili"},
+  {"lang": "Icelandic"},
+  {"lang": "Azerbaijani"},
+  {"lang": "Arabic (Saudi Arabia)"},
+  {"lang": "Finnish"},
+  {"lang": "French (Belgium)"},
+  {"lang": "English (Malaysia)"},
+  {"lang": "Serbian"},
+  {"lang": "Italian"},
+  {"lang": "English (South Africa)"},
+  {"lang": "Portuguese"},
+  {"lang": "Czech"},
+  {"lang": "Japanese"},
+  {"lang": "Persian"},
+  {"lang": "Spanish (Chile)"},
+  {"lang": "Dutch"},
+  {"lang": "English (China)"},
+  {"lang": "Spanish (Brazil)"},
+  {"lang": "French"},
+  {"lang": "Afrikaans"},
+  {"lang": "Spanish (Peru)"},
+  {"lang": "English (Taiwan)"},
+  {"lang": "Croatian"},
+  {"lang": "Telugu"},
+  {"lang": "Slovak"},
+  {"lang": "Spanish"},
+  {"lang": "English (UK)"},
+  {"lang": "Arabic (Egypt)"},
+  {"lang": "Hindi"},
+  {"lang": "Danish"},
+  {"lang": "Bulgarian"},
+  {"lang": "Spanish (EU)"},
+  {"lang": "Georgian"},
+  {"lang": "Tagalog"},
+  {"lang": "Portuguese (Brazil)"},
+  {"lang": "Indonesian"},
+  {"lang": "Kannada"},
+  {"lang": "Mongolian"}
+];
