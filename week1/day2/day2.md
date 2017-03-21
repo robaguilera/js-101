@@ -771,9 +771,3 @@ for (var i = 0; i < 5; i++) {
 
 ---
 
-## Traversing Between Element Nodes
-
-- `parentNode` selects the parent of the current element node
-- `previousSibling / nextSibling`
-- `firstChild / lastChild`
-
